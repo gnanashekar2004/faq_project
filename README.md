@@ -41,7 +41,18 @@ python manage.py createsuperuser
 #### For Windows:
 1. Download Redis for Windows from [Github Releases](https://github.com/microsoftarchive/redis/releases)
 2. Extract the downloaded `.zip` file to a permanent location (e.g., `C:\Redis`)
-3. Add Redis to System PATH
+3. Add Redis to System PATH:
+   - Right-click on 'This PC' or 'My Computer'
+   - Click 'Properties'
+   - Click 'Advanced system settings'
+   - Click 'Environment Variables'
+   - Under 'System Variables', find and select 'Path'
+   - Click 'Edit'
+   - Click 'New'
+   - Add the full path to your Redis folder (e.g., `C:\Redis`)
+   - Click 'OK' on all windows to save changes
+   - **Restart any open Command Prompt or terminal windows**
+
 4. Verify installation by opening a new Command Prompt and running:
 ```cmd
 redis-server
@@ -73,6 +84,11 @@ brew services start redis
 ```bash
 python manage.py runserver
 ```
+
+### 6. Access Admin Interface
+- Visit `http://127.0.0.1:8000/admin` in your browser
+- Log in with your superuser credentials created in step 3
+- Use the WYSIWYG editor to create and manage FAQs through a user-friendly interface
 
 ## 📌 API Endpoints
 
