@@ -36,9 +36,37 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-### 4. Start Redis Server
-```bash
+### 4. Install and Start Redis Server
+
+#### For Windows:
+1. Download Redis for Windows from [Github Releases](https://github.com/microsoftarchive/redis/releases)
+2. Extract the downloaded `.zip` file to a permanent location (e.g., `C:\Redis`)
+3. Add Redis to System PATH
+4. Verify installation by opening a new Command Prompt and running:
+```cmd
 redis-server
+```
+You should see logs indicating Redis has started on `127.0.0.1:6379`
+
+#### For Linux (Ubuntu/Debian):
+```bash
+# Update package list
+sudo apt update
+
+# Install Redis
+sudo apt install redis-server
+
+# Start Redis service
+sudo systemctl start redis
+```
+
+#### For macOS:
+```bash
+# Using Homebrew
+brew install redis
+
+# Start Redis service
+brew services start redis
 ```
 
 ### 5. Run Django Server
